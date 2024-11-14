@@ -1,0 +1,72 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Core Tables -->
+    <g>
+        <!-- Users Table -->
+        <rect x="50" y="50" width="180" height="100" rx="5" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+        <text x="140" y="85" text-anchor="middle" fill="#1976d2" font-weight="bold">Users</text>
+        <text x="70" y="105" fill="#333" font-size="12">
+            <tspan x="70" dy="0">- id</tspan>
+            <tspan x="70" dy="15">- name, email, password</tspan>
+            <tspan x="70" dy="15">- permissions, roles</tspan>
+        </text>
+
+        <!-- Services Table -->
+        <rect x="300" y="50" width="180" height="100" rx="5" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+        <text x="390" y="85" text-anchor="middle" fill="#1976d2" font-weight="bold">Services</text>
+        <text x="320" y="105" fill="#333" font-size="12">
+            <tspan x="320" dy="0">- id</tspan>
+            <tspan x="320" dy="15">- name, description</tspan>
+            <tspan x="320" dy="15">- subcategory_id, form_id</tspan>
+        </text>
+
+        <!-- Applications Table -->
+        <rect x="50" y="200" width="180" height="100" rx="5" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+        <text x="140" y="235" text-anchor="middle" fill="#1976d2" font-weight="bold">Applications</text>
+        <text x="70" y="255" fill="#333" font-size="12">
+            <tspan x="70" dy="0">- id</tspan>
+            <tspan x="70" dy="15">- form_data (JSON)</tspan>
+            <tspan x="70" dy="15">- user_id, service_id</tspan>
+        </text>
+
+        <!-- Forms Table -->
+        <rect x="300" y="200" width="180" height="100" rx="5" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+        <text x="390" y="235" text-anchor="middle" fill="#1976d2" font-weight="bold">Forms</text>
+        <text x="320" y="255" fill="#333" font-size="12">
+            <tspan x="320" dy="0">- id</tspan>
+            <tspan x="320" dy="15">- name, fields</tspan>
+            <tspan x="320" dy="15">- steps, validation</tspan>
+        </text>
+
+        <!-- Offers Table -->
+        <rect x="550" y="200" width="180" height="100" rx="5" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+        <text x="640" y="235" text-anchor="middle" fill="#1976d2" font-weight="bold">Offers</text>
+        <text x="570" y="255" fill="#333" font-size="12">
+            <tspan x="570" dy="0">- id</tspan>
+            <tspan x="570" dy="15">- amount, status</tspan>
+            <tspan x="570" dy="15">- application_id</tspan>
+        </text>
+
+        <!-- Categories -->
+        <rect x="550" y="50" width="180" height="100" rx="5" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+        <text x="640" y="85" text-anchor="middle" fill="#1976d2" font-weight="bold">Categories</text>
+        <text x="570" y="105" fill="#333" font-size="12">
+            <tspan x="570" dy="0">- id</tspan>
+            <tspan x="570" dy="15">- name</tspan>
+            <tspan x="570" dy="15">- parent_id</tspan>
+        </text>
+    </g>
+
+    <!-- Relationships -->
+    <g stroke="#1976d2" stroke-width="2" fill="none">
+        <!-- Users to Applications -->
+        <path d="M140,150 V200"/>
+        <!-- Services to Applications -->
+        <path d="M390,150 V200"/>
+        <!-- Categories to Services -->
+        <path d="M550,100 H480"/>
+        <!-- Forms to Services -->
+        <path d="M390,200 V150"/>
+        <!-- Applications to Offers -->
+        <path d="M230,250 H550"/>
+    </g>
+</svg>

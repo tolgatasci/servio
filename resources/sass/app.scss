@@ -1,0 +1,15 @@
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+
+$theme-colors: map-merge(
+                $theme-colors,
+                (
+                        "purple": #6f42c1,
+                        "success": #1c8a21
+                )
+);
+
+
+@import 'node_modules/bootstrap/scss/bootstrap';
